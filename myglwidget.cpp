@@ -13,7 +13,7 @@ MyGLWidget::MyGLWidget(QWidget *parent) :
     QOpenGLWidget(parent)
 {
     rotAngY = 00. ;
-    rotAngX = 0. ;
+    rotAngX = 20. ;
     rotAngZ = 0. ;
     yTrans =  1 ;
     //xzscale = 50000. ;
@@ -39,7 +39,7 @@ MyGLWidget::~MyGLWidget (){
 void MyGLWidget::initializeGL () {
 
 
-    glClearColor (0., 0., .7, 1.) ;
+    glClearColor (0., 0., .2, 1.) ;
     glEnable (GL_DEPTH_TEST) ;
     glEnable (GL_COLOR_MATERIAL) ;
     glEnable (GL_LIGHTING) ;
@@ -77,7 +77,8 @@ void MyGLWidget::paintGL () {
     glLightfv(GL_LIGHT0, GL_POSITION, light_position);
     //Leaving the eye at (0,0,0), move the model 15 units into the distance
 
-    glTranslatef (0., -yTrans, 0.) ;
+    glTranslatef (0., -yTrans, -2.) ;
+
     glRotatef (rotAngX, 1., 0., 0.) ;
     glRotatef (rotAngY, 0, 1, 0.) ;
     glRotatef (rotAngZ, 0., 0., 1.) ;

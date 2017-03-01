@@ -15,11 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     myglwidget.cpp \
-    surface.cpp
+    surface.cpp \
+    myimwidget.cpp
 
 HEADERS  += mainwindow.h \
     myglwidget.h \
-    surface.h
+    surface.h \
+    myimwidget.h
 
 FORMS    += mainwindow.ui
 

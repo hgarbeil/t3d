@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
     sf->calcNormals() ;
     ui->setupUi(this);
     ui->widget->loadSurface(sf);
+    ui->imwidget->setSurfFile("/Users/hg/data/lola_shade", 1152,576) ;
+    ui->imwidget->setBoxCoords(20., 45.) ;
+    ui->imwidget->repaint() ;
 }
 
 MainWindow::~MainWindow()
